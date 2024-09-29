@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <title>Landing Web Page</title>
+</head>
+<body>
+<section>
+    <img src="stars.png" id="stars">
+    <img src="moon.png" id="moon">
+    <img src="mountains_behind.png" id="mountains_behind">
+    <h2 id="text">STARLIGHT HOSTEL</h2>
+    <img src="mountains_front.png" id="mountains_front">
+</section>
+<div class="sec" id="sec">
+    <h2>ABOUT US</h2>
+    <p>Welcome there !
+        Starlight hostel, located in the heart of city Amravati,is a vibrant and social hostel that offers a unique and unforgettable experience for students. </p><br>
+    <p>Our hostel is designed to provide a comfortable,clean,safe environment to students with a range of amenities and services to make their stay truly enjoyable.</p><br>
+    <p>We offer a variety of room types to suit  all the budgets and preferences including dormitory rooms with 3-4 beds and rooms with 2 beds facility equipped with lockers , free wifi access , comfortable beds and fresh linens with study tables at each bed.</p><br>
+    <p>We offers a range of amenities to make student stay with us comfortable and convenient including with proper and hygienic food , freshly prepared in our kitchens with weekly fixed menu and special dishes on various days , 24 hour reception and security, outdoor patio area for relaxation and socializing, Laundry facilities, Free city maps and many more services .</p><br>
+    <p>Our hostel is social and vibrant space , perfect for meeting new people and making friends..We organise various events and activities including movie nights , game nights. , cultural events and workshop with promotions to outdoor games and excursion...</p><br>
+    <p> We located in the heart of city ,within the walking distance to public transportation and local shops and restaurants...Book your stay now and get ready for an unforgettable experience!</p>
+</div>
+
+<script>
+    let stars=document.getElementById('stars');
+    let moon=document.getElementById('moon');
+    let mountains_behind=document.getElementById('mountains_behind');
+    let text=document.getElementById('text');
+    let btn=document.getElementById('btn');
+    let mountains_front=document.getElementById('mountains_front');
+    let header=document.querySelector('header');
+
+    window.addEventListener('scroll',function(){
+        let value=window.scrollY;
+        stars.style.left=value*0.25+'px';
+        moon.style.top=value*1.05+'px';
+        mountains_behind.style.top=value*0.5+'px';
+        mountains_front.style.top=value*0+'px';
+
+        
+        text.style.marginRight=value*4+'px';
+        text.style.marginTop=value*1.5+'px';
+        btn.style.marginTop=value*1.5+'px';
+        header.style.top=value*0.5+'px';
+    })
+</script>
+</body>
+</html>
